@@ -1,0 +1,8 @@
+- git:
+    local-name: choreonoid
+    uri: https://github.com/choreonoid/choreonoid.git
+    version: release-2.1
+- git:
+    local-name: voxblox_installer
+    uri: https://github.com/Naoki-Hiraoka/voxblox_installer.git
+    version: 1.0
