@@ -8,6 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
   voxblox
   roslib
   choreonoid_viewer
+  choreonoid_voxblox
   )
 
 find_package(choreonoid REQUIRED)

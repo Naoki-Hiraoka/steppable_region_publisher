@@ -6,3 +6,7 @@
     local-name: voxblox_installer
     uri: https://github.com/Naoki-Hiraoka/voxblox_installer.git
     version: 1.0
+- git:
+    local-name: choreonoid_collision_tools
+    uri: https://github.com/Naoki-Hiraoka/choreonoid_collision_tools2.git
+    version: 2.0

@@ -24,12 +24,21 @@ namespace steppable_region_publisher_voxblox {
       for(double y=0.0; y<=std::max(param.collisionSoleRange,param.supportSoleRange); y+=param.soleResolution){
         if(std::pow(x,2) + std::pow(y,2) <= std::pow(param.supportSoleRange,2)){
           supportSole.emplace_back(x,y,0.0);
+          if(x!=0) supportSole.emplace_back(-x,y,0.0);
+          if(y!=0) supportSole.emplace_back(x,-y,0.0);
+          if(x!=0 && y!=0) supportSole.emplace_back(-x,-y,0.0);
         }else if(std::pow(x,2) + std::pow(y,2) <= std::pow(param.collisionSoleRange,2)){
           collisionSole.emplace_back(x,y,0.0);
+          if(x!=0) collisionSole.emplace_back(-x,y,0.0);
+          if(y!=0) collisionSole.emplace_back(x,-y,0.0);
+          if(x!=0 && y!=0) collisionSole.emplace_back(-x,-y,0.0);
         }
       }
     }
 
+    // std::shared_ptr<voxblox::Mesh> mesh = std::make_shared<voxblox::Mesh>();
+    // mesh_layer->getMesh(mesh.get());
+    // mesh_layer->getConnectedMesh(mesh.get());
     voxblox::BlockIndexList mesh_indices;
     mesh_layer->getAllAllocatedMeshes(&mesh_indices);
     int idx = 0;

@@ -12,4 +12,5 @@
 
   <depend>voxblox</depend>
   <depend>choreonoid</depend>
+  <depend>choreonoid_voxblox</depend>
 </package>
